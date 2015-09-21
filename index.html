@@ -20,38 +20,311 @@
     <![endif]-->
 </head>
 <body>
-    <div id="frontHeader">
-        <div class="container text-center centerVertically">
+
+    <nav class="sticky topNav">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- <img src="#" alt="William H. Nguyen Logo" style="height: 20vh;"> -->
-                    <div id="temp-logo" style="height: 200px; width: 200px; background-color: rgba(255,255,255,0.5); border: 3px solid rgba(0,0,0,0.5); border-radius: 50%; margin: auto; "></div>
-                    <h1>William H. Nguyen</h1>
-                    <!-- <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="about.html">About</a></li>
+                    <div style="float: left;"> <!-- Right Side -->
+                        <ul class="inlineList">
+                            <li><a>William Nguyen</a></li>
                         </ul>
-                    </nav> -->
-                    <span style="color: white; font-size: 1.5em; ">Site is Currently Under Construction</span>
-                    <br><br>
-                    <nav>
-                        <ul style="font-size: 2.5em;">
-                            <li><a href="https://facebook.com/williamhnguyen"><i class="fa fa-facebook-official"></i></a></li>
-                            <li><a href="https://linkedin.com/in/whnguyen"><i class="fa fa-linkedin-square"></i></a></li>
-                            <li><a href="https://github.com/willhnguyen"><i class="fa fa-github-alt"></i></a></li>
+                    </div>
+                    <div style="float: right"> <!-- Left Side -->
+                        <ul class="inlineList">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#edu">Education</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
         </div>
-        <footer id="stickyFooter">
-            <p class="centerVertically">William H. Nguyen &copy; 2015</p>
-        </footer>
+    </nav>
+
+    <!-- Top Display Banner -->
+    <div class="displayBanner" id="home">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <!-- Logo Goes Here -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    	 width="396px" height="216px" viewBox="-20.5 0 396 144" enable-background="new -20.5 0 396 144" xml:space="preserve">
+                        <polyline fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="5px" points="-2,0 70,144 106,90 142,144 214,0 286,144 358,0 "/>
+                        <line fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="5px" x1="146" y1="68" x2="191" y2="104"/>
+                        <line fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="5px" x1="165" y1="41" x2="210" y2="77"/>
+                    </svg>
+                    <p style="font-size: 45px; text-transform: uppercase; font-weight: 300;">William Nguyen</p>
+                    <p style="font-size: 20px; font-weight: 300;">&ldquo;Once you find your passion, never let its fire die out.&rdquo;</p>
+            </div>
+            </div>
+        </div>
     </div>
 
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="meCircle">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>Hello!</p>
+                    <p>My name is William, and I am an aspiring software developer. I recently graduated from UC Davis with a B.S. in Computer Science and a B.S. in Biochemistry and Molecular Biology.</p>
+                    <p>Why computer science, you may ask? Well, computer science is a field that is applicable almost anywhere! (I like to keep my options open.) It's amazing how a few lines of code can perform a meaningful task, and how combining these tasks can create software and new technologies that have the power to shape our society. With this knowledge to unleash novel approaches to the problems we may face, computer science makes life quite exciting.</p>
+                    <p>As a software developer, I am most comfortable programming in C++. I also know HTML &amp; CSS, JavaScript, Java, and Swift and am always open to learning new langauges and software development practices when I have the time.</p>
+                    <p>Thanks for visiting my page. Scroll on down to see my projects!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Projects</h1>
+                    <ul class="inlineList text-center projectNav">
+                        <li><a onClick="toggleProject(0);" class="selected" id="projectTab0">UCD Eats</a></li>
+                        <li><a onClick="toggleProject(1);" class="notSelected" id="projectTab1">OpenGL App</a></li>
+                        <li><a onClick="toggleProject(2);" class="notSelected" id="projectTab2">LeapMotion File Shell</a></li>
+                        <li><a onClick="toggleProject(3);" class="notSelected" id="projectTab3">Image Matching</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <article class="row projectBox show" id="project0">
+                <div class="col-md-6 text-center projectImage">
+                    <img src="img/ucdeats-screen.png" width="350px" class="projectImage">
+                </div>
+                <div class="col-md-6 projectInfo">
+                    <h2>UCD Eats</h2>
+                    <p class="subtitle">Senior Design (Jan. 2015 – June 2015)</p>
+                    <p>UCD Eats is a mobile app that provides nutrition information for the foods available at the UC Davis Coffee House and allows users to log the information to Fitbit. Users are also given the option to modify various food items based on their order via the Build-Your-Own feature.</p>
+                    <p>This app was created using the Ionic Framework and Facebook's Parse database. Ionic is a web framework that packages HTML, CSS, and JavaScript code into an iOS and Android app. This allowed us to focus on the content without worrying too much about the UI and UX.</p>
+                    <p>My role involved the front-end development of the app. I created and modified the views, search modal, and the Build-Your-Own feature.</p>
+                    <p><b>Technology Used:</b> <a href="ionicframework.com">Ionic Framework</a>, <a href="parse.com">Facebook Parse</a>, HTML, CSS, JavaScript, AngularJS</p>
+                    <br>
+                    <a href="https://geo.itunes.apple.com/us/app/ucd-eats/id1001785501?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
+                    <a href="https://play.google.com/store/apps/details?id=io.cordova.ucdfood" style="display:inline-block;overflow:hidden;background:url(https://developer.android.com/images/brand/en_app_rgb_wo_45.png) no-repeat;background-size:114px;width:115px;height:40px;"></a>
+                </div>
+            </article>
+
+            <article class="row projectBox hide" id="project1">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 projectInfo">
+                    <h2>OpenGL App</h2>
+                    <p class="subtitle">Computer Graphics (Oct. 2014 - Dec. 2014)</p>
+                    <p>This OpenGL app renders 3D objects using both the CPU and GPU. Vertex Shader, Fragment Shader, Texture Mapping.</p>
+                    <p><b>Technology Used:</b> OpenGL, GL Shading Langauge (GLSL), C++</p>
+                </div>
+            </article>
+
+            <article class="row projectBox hide" id="project2">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 projectInfo">
+                    <h2>LeapMotion File Shell</h2>
+                    <p class="subtitle">LA Hacks (April 2015)</p>
+                    <p>This project lets users use hand gestures to manage their files.</p>
+                    <p><b>Technology Used:</b> LeapMotion, TouchDesigner, Python</p>
+                </div>
+            </article>
+
+            <article class="row projectBox hide" id="project3">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 projectInfo">
+                    <h2>Image Matching</h2>
+                    <p class="subtitle">Computer Vision (May 2015)</p>
+                    <p>The image matching script allows users to find similar images given an input.</p>
+                    <p><b>Technology Used:</b> Matlab</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Education Section -->
+    <section id="edu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Education</h1>
+                    <ul class="inlineList text-center eduNav">
+                        <li><a onClick="toggleEdu(0)" class="selected" id="eduTab0">UC Davis</a></li>
+                        <li><a onClick="toggleEdu(1)" class="notSelected" id="eduTab1">Online Courses</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <article class="eduBox row" id="edu0">
+                <div class="col-md-12 text-center">
+                    <div>
+                        <h2>University of California, Davis</h2>
+                        <ul class="centeredList">
+                            <li>B.S. in Computer Science (2015)</li>
+                            <li>B.S. in Biochemistry and Molecular Biology (2015)</li>
+                        </ul>
+
+                        <h3>Notable Courses</h3>
+                        <ul class="centeredList">
+                            <li>Computer Graphics</li>
+                            <li>Computer Vision</li>
+                            <li>Computer Networks</li>
+                            <li>Computer Security</li>
+                            <li>Theory and Practice of Bioinformatics</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="eduBox hide" id="edu1">
+                <div class="row">
+                    <div class="col-md-4">
+                            <h2>Udacity</h2>
+                            <ul class="centeredList">
+                                <li>Intro to Relational Databases (Completed)</li>
+                                <li>Softare Testing (Enrolled)</li>
+                            </ul>
+                    </div>
+                    <div class="col-md-4">
+                            <h2>EdX</h2>
+                            <ul class="centeredList">
+                                <li>Computer Graphics (Enrolled, UCSD)</li>
+                            </ul>
+                    </div>
+                    <div class="col-md-4">
+                            <h2>Coursera</h2>
+                            <ul class="centeredList">
+                                <li>Machine Learning (Enrolled, Stanford)</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                            <h2>Team Treehouse</h2>
+                            <ul class="centeredList">
+                                <li>iOS Development with Swift (Enrolled)</li>
+                            </ul>
+                    </div>
+                    <div class="col-md-4">
+                            <h2>Other</h2>
+                            <ul class="centeredList">
+                                <li>FreeCodeCamp (Enrolled)</li>
+                            </ul>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </article>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Skills</h1>
+                    <ul class="centeredList threeCols">
+                        <li>C &amp; C++</li>
+                        <li>HTML &amp; CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java (prior experience)</li>
+                        <li>Python (prior experience)</li>
+                        <li>Matlab</li>
+                        <li>Swift</li>
+                        <li>OpenGL &amp; GLSL</li>
+                        <li>BootStrap</li>
+                        <li>jQuery</li>
+                        <li>ionic Framework</li>
+                        <li>AngularJS (prior experience)</li>
+                        <li>Xcode &amp; Interface Builder</li>
+                        <li>Qt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Contact</h1>
+                    <p class="text-center">Please email me at <b>willhnguyen+fromSite [at] gmail.com</b>, and I will respond to you as soon as I can. Thank you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-left"> <!-- Site Name -->
+                    WN William Nguyen
+                </div>
+                <div class="col-md-4 text-center"> <!-- Copyright -->
+                    Copyright &copy; 2015
+                </div>
+                <div class="col-md-4 text-right"> <!-- Social Links -->
+                    <ul class="inlineList">
+                        <li><a href="https://fb.com/williamhnguyen"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/willhnguyen"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://github.com/willhnguyen"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://linkedin.com/in/whnguyen"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        var toggleProject = function (id_no) {
+            $(".projectBox").removeClass("show");
+            $(".projectNav a").removeClass("selected");
+            $(".projectBox").addClass("hide");
+            $(".projectNav a").addClass("notSelected");
+            $(("#project" + id_no)).removeClass("hide");
+            $(("#project" + id_no)).addClass("show");
+            $(("#projectTab" + id_no)).removeClass("notSelected");
+            $(("#projectTab" + id_no)).addClass("selected");
+        };
+        var toggleEdu = function (id_no) {
+            $(".eduBox").removeClass("show");
+            $(".eduNav a").removeClass("selected");
+            $(".eduBox").addClass("hide");
+            $(".eduNav a").addClass("notSelected");
+            $(("#edu" + id_no)).removeClass("hide");
+            $(("#edu" + id_no)).addClass("show");
+            $(("#eduTab" + id_no)).removeClass("notSelected");
+            $(("#eduTab" + id_no)).addClass("selected");
+        }
+    </script>
 </body>
 </html>

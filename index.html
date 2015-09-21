@@ -51,12 +51,13 @@
             <div class="row">
                 <div class="col-md-12 ">
                     <!-- Logo Goes Here -->
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     	 width="396px" height="216px" viewBox="-20.5 0 396 144" enable-background="new -20.5 0 396 144" xml:space="preserve">
                         <polyline fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="5px" points="-2,0 70,144 106,90 142,144 214,0 286,144 358,0 "/>
                         <line fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="5px" x1="146" y1="68" x2="191" y2="104"/>
                         <line fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="5px" x1="165" y1="41" x2="210" y2="77"/>
-                    </svg>
+                    </svg> -->
+                    <img src="img/WN Logo.svg" class="img-responsive center-block">
                     <p style="font-size: 45px; text-transform: uppercase; font-weight: 300;">William Nguyen</p>
                     <p style="font-size: 20px; font-weight: 300;">&ldquo;Once you find your passion, never let its fire die out.&rdquo;</p>
             </div>
@@ -74,8 +75,9 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="meCircle">
-                    </div>
+                    <!-- <div class="meCircle">
+                    </div> -->
+                    <img src="img/me.jpg" class="img-responsive img-circle center-block meCircle">
                 </div>
                 <div class="col-md-8">
                     <p>Hello!</p>
@@ -89,7 +91,7 @@
     </section>
 
     <!-- Divider -->
-    <div class="divider"></div>
+    <div class="divider" id="divider1"></div>
 
     <!-- Projects Section -->
     <section id="projects">
@@ -107,8 +109,9 @@
             </div>
 
             <article class="row projectBox show" id="project0">
-                <div class="col-md-6 text-center projectImage">
-                    <img src="img/ucdeats-screen.png" width="350px" class="projectImage">
+                <div class="col-md-6 text-center">
+                    <!-- <img src="img/ucdeats-screen.png" class="projectImage img-responsive center-block"> -->
+                    <img src="img/ucdeats-screen.png" class="projectImage" style="max-width: 350px;">
                 </div>
                 <div class="col-md-6 projectInfo">
                     <h2>UCD Eats</h2>
@@ -129,8 +132,9 @@
                 <div class="col-md-6 projectInfo">
                     <h2>OpenGL App</h2>
                     <p class="subtitle">Computer Graphics (Oct. 2014 - Dec. 2014)</p>
-                    <p>This OpenGL app renders 3D objects using both the CPU and GPU. Vertex Shader, Fragment Shader, Texture Mapping.</p>
-                    <p><b>Technology Used:</b> OpenGL, GL Shading Langauge (GLSL), C++</p>
+                    <p>This OpenGL app renders 3D objects. The controller allows toggling between GPU and CPU rendering, transforming the objects, and modifying the light, material, and texture properties.</p>
+                    <p>The math behind this app includes various matrix transforms to convert between object and world coordinates and determining the lighting effects. Lighting effects include the popular flat, Gouraud, and Phong shading.</p>
+                    <p><b>Technology Used:</b> OpenGL, GL Shading Langauge (GLSL), C++, Qt</p>
                 </div>
             </article>
 
@@ -140,7 +144,8 @@
                 <div class="col-md-6 projectInfo">
                     <h2>LeapMotion File Shell</h2>
                     <p class="subtitle">LA Hacks (April 2015)</p>
-                    <p>This project lets users use hand gestures to manage their files.</p>
+                    <p>With technology like Xbox Kinect and the upcoming Oculus Rift, 3D gestures are on the way to becoming the norm. What if we could bring this feature to our computers? This project attempts to do just that!</p>
+                    <p>Using LeapMotion's infrared motion sensing device, our project allows users to interact with their files through a GUI shell. A simple tap to select, opening the palm to open a file, along with other cool gestures create a fresh new experience of interacting with your files.</p>
                     <p><b>Technology Used:</b> LeapMotion, TouchDesigner, Python</p>
                 </div>
             </article>
@@ -151,7 +156,8 @@
                 <div class="col-md-6 projectInfo">
                     <h2>Image Matching</h2>
                     <p class="subtitle">Computer Vision (May 2015)</p>
-                    <p>The image matching script allows users to find similar images given an input.</p>
+                    <p>Images all have distinct features that make them stand out. It is then possible to find similar images based on these features.</p>
+                    <p>This Matlab script creates a database from a set of images' features and allows a user to find images similar to an input image. Features are grouped to define an image based on the group distribution of their features. This distribution is then used to determine how similar images are to each other, with smaller root mean squared errors representing the more similar images.</p>
                     <p><b>Technology Used:</b> Matlab</p>
                 </div>
             </article>
@@ -160,7 +166,7 @@
     </section>
 
     <!-- Divider -->
-    <div class="divider"></div>
+    <div class="divider" id="divider2"></div>
 
     <!-- Education Section -->
     <section id="edu">
@@ -202,7 +208,7 @@
                             <h2>Udacity</h2>
                             <ul class="centeredList">
                                 <li>Intro to Relational Databases (Completed)</li>
-                                <li>Softare Testing (Enrolled)</li>
+                                <li>Software Testing (Enrolled)</li>
                             </ul>
                     </div>
                     <div class="col-md-4">
@@ -238,7 +244,7 @@
     </section>
 
     <!-- Divider -->
-    <div class="divider"></div>
+    <div class="divider" id="divider3"></div>
 
     <!-- Skills -->
     <section id="skills">
@@ -252,6 +258,7 @@
                         <li>JavaScript</li>
                         <li>Java (prior experience)</li>
                         <li>Python (prior experience)</li>
+                        <li>Basic SQL</li>
                         <li>Matlab</li>
                         <li>Swift</li>
                         <li>OpenGL &amp; GLSL</li>
@@ -268,7 +275,7 @@
     </section>
 
     <!-- Divider -->
-    <div class="divider"></div>
+    <div class="divider" id="divider4"></div>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -285,13 +292,10 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-left"> <!-- Site Name -->
-                    WN William Nguyen
+                <div class="col-md-6 text-center">
+                    Copyright &copy; 2015, William Nguyen.
                 </div>
-                <div class="col-md-4 text-center"> <!-- Copyright -->
-                    Copyright &copy; 2015
-                </div>
-                <div class="col-md-4 text-right"> <!-- Social Links -->
+                <div class="col-md-6 text-center">
                     <ul class="inlineList">
                         <li><a href="https://fb.com/williamhnguyen"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://twitter.com/willhnguyen"><i class="fa fa-twitter"></i></a></li>

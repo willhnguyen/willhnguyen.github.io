@@ -21,7 +21,7 @@ b {
     font-width: 900;
 }
 p {
-    line-height: 1.5em;
+    /*line-height: 1.5em;*/
 }
 body {
     background: url(../img/cover.png) center center fixed;
@@ -40,7 +40,7 @@ body {
     position: fixed;
 }
 .topNav {
-    padding: 10px 0 0px 0;
+    padding: 0px 0 0px 0;
     margin-top: 0;
     margin-bottom: 0;
     background-color: #eee;
@@ -51,6 +51,10 @@ body {
 }
 .topNav * {
     font-size: 14px;
+}
+.topNav li {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .topNav .inlineList a{
     padding-bottom: 8px;
@@ -66,6 +70,7 @@ body {
 
 ul.inlineList {
     padding-left: 0;
+    margin-bottom: 3px;
 }
 .inlineList li {
     display: inline-block;
@@ -94,7 +99,9 @@ section {
     padding: 100px 0 100px 0;
     background-color: #fff;
 }
-
+section p{
+    line-height: 1.5em;
+}
 
 /*******************************************************************************
 * Dividers
@@ -104,13 +111,25 @@ section {
     height: 200px;
     /*background-color: #ddd;*/
 }
+#divider1, #divider3 {
+    background: url(../img/coolgeo.png) center center fixed;
+    background-size: cover;
+}
+#divider2 {
+    background: url(../img/pomegranategradient.png) center center fixed;
+    background-size: cover;
+}
+#divider4 {
+    background: url(../img/orangegeo.png) center center fixed;
+    background-size: cover;
+}
 
 /*******************************************************************************
 * Footer
 *******************************************************************************/
 
 footer {
-    padding: 10px 0 0 0;
+    padding: 10px 0 7px 0;
     background-color: #333;
     color: #fff;
 }
@@ -121,6 +140,11 @@ footer a:hover {
     color: black;
     background-color: #fff;
 }
+footer li {
+    /*line-height: 1em;*/
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+}
 
 /*******************************************************************************
 * Projects
@@ -130,6 +154,7 @@ footer a:hover {
     -webkit-transform: translate(0px, 15px);
     -moz-transform: translate(0px, 15px);
     transform: translate(0px, 15px);
+    width: 80%;
 }
 .projectImage:hover {
     /*-webkit-filter: drop-shadow(0px 12px 12px rgba(0,0,0,0.5));
@@ -149,6 +174,11 @@ footer a:hover {
 * Section Navigations
 *******************************************************************************/
 
+.projectNav li,
+.eduNav li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .projectNav a,
 .eduNav a {
     cursor: pointer;
@@ -163,18 +193,19 @@ footer a:hover {
 }
 
 /*******************************************************************************
+* Contact
+*******************************************************************************/
+
+#contact {
+    min-height: 500px;
+}
+
+/*******************************************************************************
 * Other
 *******************************************************************************/
 
 .meCircle {
-    margin: auto;
-    margin-top: 30px;
-    width: 300px;
-    height: 300px;
     border: 2px solid #333;
-    border-radius: 50%;
-    background: url(../img/me.jpg) center center;
-    background-size: cover;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
 }
 

@@ -24,8 +24,8 @@ p {
     /*line-height: 1.5em;*/
 }
 body {
-    background: url(../img/cover.png) center center fixed;
     background-size: cover;
+    background: url(../img/cover.png) center center fixed;
 }
 
 /*******************************************************************************
@@ -112,16 +112,16 @@ section p{
     /*background-color: #ddd;*/
 }
 #divider1, #divider3 {
-    background: url(../img/coolgeo.png) center center fixed;
     background-size: cover;
+    background: url(../img/coolgeo.png) center center fixed;
 }
 #divider2 {
-    background: url(../img/pomegranategeo.png) center center fixed;
     background-size: cover;
+    background: url(../img/pomegranategeo.png) center center fixed;
 }
 #divider4 {
-    background: url(../img/orangegeo.png) center center fixed;
     background-size: cover;
+    background: url(../img/orangegeo.png) center center fixed;
 }
 
 /*******************************************************************************

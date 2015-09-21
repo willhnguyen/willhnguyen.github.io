@@ -116,7 +116,7 @@ section p{
     background-size: cover;
 }
 #divider2 {
-    background: url(../img/pomegranategradient.png) center center fixed;
+    background: url(../img/pomegranategeo.png) center center fixed;
     background-size: cover;
 }
 #divider4 {
@@ -139,11 +139,6 @@ footer * {
 footer a:hover {
     color: black;
     background-color: #fff;
-}
-footer li {
-    /*line-height: 1em;*/
-    /*margin-top: 5px;*/
-    /*margin-bottom: 5px;*/
 }
 
 /*******************************************************************************

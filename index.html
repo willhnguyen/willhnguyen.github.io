@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <script src="./script/script.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -13,7 +14,7 @@
   
     <!-- Personal Info Card -->
     <div class="card" id="personal">
-        <img src="./img/me.jpg" alt="Photo of William H. Nguyen" id="profile-pic">
+        <img src="./img/me.jpg" alt="Photo of William H. Nguyen" class="img-circle" id="profile-pic">
         <section class="info-section">
             <h1>William H. Nguyen</h1>
             <p id="slogan">M.S. Computer Science, <a href="sjsu.edu">SJSU</a></p>
@@ -37,10 +38,10 @@
                 </li>
             </ul>
 
-            <ul class="keywords">
+            <ul class="keywords inline-list">
                 <li>Deep Learning</li>
-                <li>Machine Learning</li>
                 <li>Computer Vision</li>
+                <li>Machine Learning</li>
                 <li>Autonomous Vehicles</li>
             </ul>
         </section>
@@ -123,44 +124,44 @@
     </div>
     
     <!-- Projects Card -->
-    <div class="card card-center" id="projects">
+    <div class="card card-centered" id="projects">
         <h1>Projects</h1>
         
         <!-- Filter Toggles -->
         <ul class="filters">
-            <li onclick="projects_toggle(this)">Computer Graphics</li>
-            <li onclick="projects_toggle(this)">Computer Vision</li>
-            <li onclick="projects_toggle(this)" class="filter-toggle-active">Deep Learning</li>
-            <li onclick="projects_toggle(this)">Machine Learning</li>
-            <li onclick="projects_toggle(this)">Software Development</li>
+            <li onclick="app.projects_toggle(this)">Computer Graphics</li>
+            <li onclick="app.projects_toggle(this)">Computer Vision</li>
+            <li onclick="app.projects_toggle(this)" class="filter-toggle-active">Deep Learning</li>
+            <li onclick="app.projects_toggle(this)">Machine Learning</li>
+            <li onclick="app.projects_toggle(this)">Software Development</li>
         </ul>
         
         <!-- Scroll Buttons -->
-        <span onclick="project_scroll_left()" id="scroll-button-left"><i class="fas fa-chevron-circle-left"></i></span>
-        <span onclick="project_scroll_right()" id="scroll-button-right"><i class="fas fa-chevron-circle-right"></i></span>
+        <span onclick="app.project_list_scroll(-1)" id="scroll-button-left"><i class="fas fa-chevron-circle-left"></i></span>
+        <span onclick="app.project_list_scroll(1)" id="scroll-button-right"><i class="fas fa-chevron-circle-right"></i></span>
         
         <!-- Individual Projects -->
-        <div class="project-view-inactive-left">
-            <img src="./img/orangegeo.png" alt="Project Image" class="project-img">
+        <div class="project-view">
+            <img src="./img/coolgeo.png" alt="Project Image" class="project-img">
             <section>
-                <h2>Behavioral Cloning for Self-Driving Cars</h2>
+                <h2>Card A</h2>
 
-                <ul class="project-tech-list">
-                    <li>Python</li>
-                    <li>OpenCV</li>
-                    <li>TensorFlow</li>
+                <ul class="inline-list project-tech-list">
+                    <li>Skill A</li>
+                    <li>Skill B</li>
+                    <li>Skill C</li>
                 </ul>
                 
                 <p>Training a vehicle to drive based on images of a human player's driving pattern.</p>
             </section>
         </div>
         
-        <div class="project-view-active">
-            <img src="./img/orangegeo.png" alt="Project Image" class="project-img">
+        <div class="project-view">
+            <img src="./img/coolgeo.png" alt="Project Image" class="project-img">
             <section>
                 <h2>Vehicle Detection</h2>
 
-                <ul class="project-tech-list">
+                <ul class="inline-list project-tech-list">
                     <li>Python</li>
                     <li>OpenCV</li>
                     <li>TensorFlow</li>
@@ -171,38 +172,48 @@
             </section>
         </div>
         
-        <div class="project-view-inactive-right">
-            <img src="./img/orangegeo.png" alt="Project Image" class="project-img">
+        <div class="project-view">
+            <img src="./img/coolgeo.png" alt="Project Image" class="project-img">
             <section>
-                <h2>Behavioral Cloning for Self-Driving Cars</h2>
+                <h2>Card C</h2>
 
-                <ul class="project-tech-list">
-                    <li>Python</li>
-                    <li>OpenCV</li>
-                    <li>TensorFlow</li>
+                <ul class="inline-list project-tech-list">
+                    <li>Skill D</li>
+                    <li>Skill E</li>
+                    <li>Skill F</li>
                 </ul>
                 
                 <p>Training a vehicle to drive based on images of a human player's driving pattern.</p>
             </section>
         </div>
     </div>
-    
-    <!-- Personal Info Card Final -->
-<!--
+
+   
+    <!-- Personal Info Card Final -->    
     <div class="card" id="personal-final">
-        <img src="./img/WN%20Logo.svg" alt="William H. Nguyen Logo">
-        <h1>William H. Nguyen</h1>
+        <section class="info-section">
+            <h1>William H. Nguyen</h1>
 
-        <ul id="contact-list">
-            <li><i class="list-icon fas fa-envelope"></i> willhnguyen@gmail.com</li>
-            <li><i class="list-icon fas fa-globe"></i> willhnguyen.com</li>
-            <li><i class="list-icon fab fa-linkedin"></i> /in/willhnguyen</li>
-            <li><i class="list-icon fab fa-github"></i> willhnguyen</li>
-        </ul>
+            <ul id="contact-list">
+                <li><i class="list-icon fas fa-envelope"></i> <a href="mailto:willhnguyen@gmail.com">willhnguyen@gmail.com</a>
+                </li>
+                <li><i class="list-icon fas fa-globe"></i> <a href="http://willhnguyen.com">willhnguyen.com</a>
+                </li>
+                <li><i class="list-icon fab fa-linkedin"></i> <a href="http://linkedin.com/in/willhnguyen">/in/willhnguyen</a>
+                </li>
+                <li><i class="list-icon fab fa-github"></i> <a href="http://github.com/willhnguyen">willhnguyen</a>
+                </li>
+            </ul>
 
-        <p class="keywords">Deep Learning • Machine Learning • Computer Vision • Autonomous Vehicles</p>
+            <ul class="keywords inline-list">
+                <li>Deep Learning</li>
+                <li>Computer Vision</li>
+                <li>Machine Learning</li>
+                <li>Autonomous Vehicles</li>
+            </ul>
+        </section>
     </div>
--->
     
 </body>
+<script>app.initialize();</script>
 </html>

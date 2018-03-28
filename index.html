@@ -17,23 +17,24 @@
         <img src="./img/me.jpg" alt="Photo of William H. Nguyen" class="img-circle" id="profile-pic">
         <section class="info-section">
             <h1>William H. Nguyen</h1>
-            <p id="slogan">M.S. Computer Science, <a href="sjsu.edu">SJSU</a></p>
+            <p class="slogan">M.S. Computer Science, <a href="http://sjsu.edu">SJSU</a></p>
+<!--            <p class="slogan"><i class="fas fa-map-marker"></i> San Jose, CA, USA</p>-->
 
             <ul id="contact-list">
                 <li>
-                    <i class="list-icon fas fa-envelope"></i> 
+                    <i class="list-icon fas fa-fw fa-envelope"></i> 
                     <a href="mailto:willhnguyen@gmail.com">willhnguyen@gmail.com</a>
                 </li>
                 <li>
-                    <i class="list-icon fas fa-globe"></i> 
+                    <i class="list-icon fas fa-fw fa-globe"></i> 
                     <a href="http://willhnguyen.com">willhnguyen.com</a>
                 </li>
                 <li>
-                    <i class="list-icon fab fa-linkedin"></i> 
+                    <i class="list-icon fab fa-fw fa-linkedin"></i> 
                     <a href="http://linkedin.com/in/willhnguyen">/in/willhnguyen</a>
                 </li>
                 <li>
-                    <i class="list-icon fab fa-github"></i> 
+                    <i class="list-icon fab fa-fw fa-github"></i> 
                     <a href="http://github.com/willhnguyen">willhnguyen</a>
                 </li>
             </ul>
@@ -62,7 +63,9 @@
     <!-- About Me Card -->
     <div class="card card-left" id="about-me">
         <h1>About Me</h1>
-        <p>Hey, there! I’m William, and I am a graduate student at San Jose State University. My interests lie in deep learning applications such as autonomous vehicles and robotics. As a result, I have used TensorFlow, OpenCV, Python, and C++ in several projects. Please see the rest of this online resume for more information, and if you’re interested, please send me an email at <a href="mailto:willhnguyen@gmail.com">willhnguyen@gmail.com</a>. Thanks!</p>
+        
+        <p>I am a computer science graduate student and a student in Udacity's Self-Driving Car Nanodegree. My interests lie in deep learning and computer vision. My recent projects mainly involve TensorFlow, OpenCV, C++, and Python.</p>
+        <p>If you're interested, don't hesitate to send me an email!</p>
     </div>
     
     <!-- Skills Card -->
@@ -128,23 +131,28 @@
         <h1>Projects</h1>
         
         <!-- Filter Toggles -->
+<!--
         <ul class="filters">
             <li onclick="app.projects_toggle(this)">Computer Graphics</li>
             <li onclick="app.projects_toggle(this)">Computer Vision</li>
-            <li onclick="app.projects_toggle(this)" class="filter-toggle-active">Deep Learning</li>
+            <li onclick="app.projects_toggle(this)">Deep Learning</li>
             <li onclick="app.projects_toggle(this)">Machine Learning</li>
             <li onclick="app.projects_toggle(this)">Software Development</li>
         </ul>
+-->
         
         <!-- Scroll Buttons -->
+<!--
         <span onclick="app.project_list_scroll(-1)" id="scroll-button-left"><i class="fas fa-chevron-circle-left"></i></span>
         <span onclick="app.project_list_scroll(1)" id="scroll-button-right"><i class="fas fa-chevron-circle-right"></i></span>
+-->
         
         <!-- Individual Projects -->
+<!--
         <div class="project-view">
-            <img src="./img/coolgeo.png" alt="Project Image" class="project-img">
+            <img src="./img/geo.png" alt="Project Image" class="project-img">
             <section>
-                <h2>Card A</h2>
+                <h2>Project Title</h2>
 
                 <ul class="inline-list project-tech-list">
                     <li>Skill A</li>
@@ -153,39 +161,16 @@
                 </ul>
                 
                 <p>Training a vehicle to drive based on images of a human player's driving pattern.</p>
-            </section>
-        </div>
-        
-        <div class="project-view">
-            <img src="./img/coolgeo.png" alt="Project Image" class="project-img">
-            <section>
-                <h2>Vehicle Detection</h2>
-
-                <ul class="inline-list project-tech-list">
-                    <li>Python</li>
-                    <li>OpenCV</li>
-                    <li>TensorFlow</li>
-                    <li>Scikit-Learn</li>
-                </ul>
                 
-                <p>Identify vehicles around a car by using computer vision, machine learning, and a sliding window. Detection can work on individual images or a video.</p>
+                <p class="project-link"><i class="fab fa-github"></i> <a href="www.github.com/willhnguyen/">/willhnguyen/project_location</a></p>
             </section>
         </div>
-        
-        <div class="project-view">
-            <img src="./img/coolgeo.png" alt="Project Image" class="project-img">
-            <section>
-                <h2>Card C</h2>
-
-                <ul class="inline-list project-tech-list">
-                    <li>Skill D</li>
-                    <li>Skill E</li>
-                    <li>Skill F</li>
-                </ul>
-                
-                <p>Training a vehicle to drive based on images of a human player's driving pattern.</p>
-            </section>
-        </div>
+-->
+   
+        <center><p><i class="fas fa-wrench"></i> This projects list is currently under construction. <i class="fas fa-wrench"></i></p></center>
+        <br>
+        <p>In the meantime, please check out <a href="://github.com/willhnguyen"><i class="fab fa-github"></i> github.com/willhnguyen</a>.</p>
+   
     </div>
 
    
@@ -193,15 +178,16 @@
     <div class="card" id="personal-final">
         <section class="info-section">
             <h1>William H. Nguyen</h1>
+            <p><i class="fas fa-map-marker"></i> &nbsp;&nbsp;San Jose, CA, USA</p>
 
             <ul id="contact-list">
-                <li><i class="list-icon fas fa-envelope"></i> <a href="mailto:willhnguyen@gmail.com">willhnguyen@gmail.com</a>
+                <li><i class="list-icon fas fa-fw fa-envelope"></i> <a href="mailto:willhnguyen@gmail.com">willhnguyen@gmail.com</a>
                 </li>
-                <li><i class="list-icon fas fa-globe"></i> <a href="http://willhnguyen.com">willhnguyen.com</a>
+                <li><i class="list-icon fas fa-fw fa-globe"></i> <a href="http://willhnguyen.com">willhnguyen.com</a>
                 </li>
-                <li><i class="list-icon fab fa-linkedin"></i> <a href="http://linkedin.com/in/willhnguyen">/in/willhnguyen</a>
+                <li><i class="list-icon fab fa-fw fa-linkedin"></i> <a href="http://linkedin.com/in/willhnguyen">/in/willhnguyen</a>
                 </li>
-                <li><i class="list-icon fab fa-github"></i> <a href="http://github.com/willhnguyen">willhnguyen</a>
+                <li><i class="list-icon fab fa-fw fa-github"></i> <a href="http://github.com/willhnguyen">willhnguyen</a>
                 </li>
             </ul>
 

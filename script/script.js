@@ -75,3 +75,20 @@ class App {
 }
 
 let app = new App();
+
+// Scroll listener for navigation sticky/non-sticky toggling
+window.onscroll = function () {
+    let navwrapper = document.getElementsByClassName('nav-wrapper')[0];
+    let navbar = document.getElementsByTagName('nav')[0];
+    return function() {
+        
+
+        if (navwrapper.getBoundingClientRect()['top'] < 15) {
+            navbar.classList.remove('not-sticky');
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+            navbar.classList.add('not-sticky');
+        }
+    }();
+}

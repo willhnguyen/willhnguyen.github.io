@@ -20,7 +20,8 @@ hr {
     width: 650px;
 	margin: 50px auto;
 	padding: 50px;
-	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25);
+	box-shadow: 0 3px 20px 0 rgba(0,0,0,0.25);
+    background-color: white;
 }
 .card-left {
     padding-left: 250px;
@@ -37,11 +38,9 @@ hr {
     height: calc(100%);
     min-height: 100px;
     width: 200px;
-    z-index: -1;
     content: '';
-    background: #56ccf2; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #f7b733, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #537895; /* fallback for old browsers */
+    background-image: linear-gradient(-30deg, #09203f 0%, #537895 100%);
 }
 .card-left::before{
     left: 0;
@@ -61,7 +60,7 @@ hr {
 }
 #personal-final {
     text-align: center;
-    background-color: #fc4a1a;
+    background-color: #09203f;
     color: white;
 }
 /***********************************************************************
@@ -69,6 +68,7 @@ hr {
  **********************************************************************/
 nav {
     height: 1em;
+    z-index: 100;
 }
 .nav-wrapper {
     margin: -1em inherit;
@@ -84,14 +84,23 @@ nav {
     padding: 0;
     height: 3em;
     border: 0;
-    background-color: red; /* Should not be visible */
 }
 nav.sticky {
     position: fixed;
-    padding: 1em;
+    padding: 1em 0;
     top: 0;
     width: 100vw;
+    height: 1.8em;
     background-color: white;
+}
+nav li {
+    border-bottom: 2px solid black;
+}
+nav li:hover {
+    border-color: #537895;
+}
+nav li a {
+    text-decoration: none;
 }
 
 /***********************************************************************
@@ -124,19 +133,22 @@ ul.filters {
 ul.filters li {
     margin-bottom: 0.25em;
     padding: 0.2em 1em;
-    border: 1px solid #fc4a1a;
+    border: 1px solid #537895;
     border-radius: 1em;
     font-weight: 400;
     font-size: 0.75em;
-    color: #fc4a1a;
+    color: #537895;
     cursor: pointer;
 }
 ul.filters li.filter-toggle-active, ul.filters li:hover {
-    background-color: #fc4a1a;
+    background-color: #537895;
     color: white;
 }
 .keywords, .project-tech-list {
     font-size: 0.8em;
+}
+#personal .keywords {
+    text-align: left;
 }
 #contact-list {
     margin: 2em auto;
@@ -180,7 +192,7 @@ img {
  * Text Properties
  **********************************************************************/
 p {
-    margin: 0.5em 0;
+    margin: 1em 0;
 }
 a {
     color: black;
@@ -188,7 +200,7 @@ a {
     text-decoration-color: lightgray;
 }
 a:hover {
-    color: #fc4a1a;
+    color: #537895;
 }
 h1 {
     font-weight: 600;
@@ -201,12 +213,13 @@ h2 {
 .card-centered h1 {
     text-align: center;
 }
-#slogan {
+.slogan {
     font-size: 1.1em;
+    line-height: 1em;
 }
-#contact-list a {
+#contact-list a, #contact-list span {
     position: relative;
-    left: 15px;
+    left: 5px;
 }
 #personal h1 {
     margin-top: 0.5em;
@@ -223,7 +236,10 @@ h2 {
     text-decoration-color: inherit;
 }
 #personal-final a:hover {
-    color: #333;
+    color: #537895;
+}
+.project-link {
+    margin-top: 2em;
 }
 
 /***********************************************************************
@@ -234,7 +250,7 @@ h2 {
     top: calc(5em);
     cursor: pointer;
     font-size: 3em;
-    color: #fc4a1a;
+    color: #537895;
     opacity: 0.5;
 }
 #scroll-button-left:hover, #scroll-button-right:hover {

@@ -1,241 +1,283 @@
-* {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    -webkit-transition: -webkit-transform 0.8s ease;
-    -moz-transition: -moz-transform 0.8s ease;
-    transition: transform 0.8s ease;
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: #333;
 }
-a:hover {
+hr {
+    margin: 1em auto;
+}
+
+/***********************************************************************
+ * Card Properties
+ **********************************************************************/
+.card {
+    position: relative;
+    width: 650px;
+	margin: 50px auto;
+	padding: 50px;
+	box-shadow: 0 3px 20px 0 rgba(0,0,0,0.25);
+    background-color: white;
+}
+.card-left {
+    padding-left: 250px;
+    width: 450px;
+}
+.card-right {
+    padding-right: 250px;
+    width: 450px;
+}
+.card-left::before, .card-right::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: calc(100%);
+    min-height: 100px;
+    width: 200px;
+    content: '';
+    background: #537895; /* fallback for old browsers */
+    background-image: linear-gradient(-30deg, #09203f 0%, #537895 100%);
+}
+.card-left::before{
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.card-right::before{
+    right: 0;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.info-section {
+    display: inline-block;
+    width: 344px; /* odd size due to inline-block whitespace */
+}
+#projects section {
+    display: inline-block;
+    width: 350px;
+}
+#personal-final {
+    text-align: center;
+    background-color: #09203f;
+    color: white;
+}
+/***********************************************************************
+ * Navigation Properties
+ **********************************************************************/
+nav {
+    height: 1em;
+    z-index: 100;
+}
+.nav-wrapper {
+    margin: -1em inherit;
+    height: 1em;
+}
+.navclear {
+    display: none;
+    background-color: red;
+}
+.navclear-active {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+    border: 0;
+}
+nav.sticky {
+    position: fixed;
+    padding: 1em 0;
+    top: 0;
+    width: 100vw;
+    height: 1.8em;
+    background-color: white;
+}
+nav li {
+    border-bottom: 2px solid black;
+}
+nav li:hover {
+    border-color: #537895;
+}
+nav li a {
     text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+
+/***********************************************************************
+ * Unordered List Properties
+ **********************************************************************/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 1em;
+    text-transform: uppercase;
+}
+
+.inline-list, nav ul, ul.filters {
     text-align: center;
-    padding: 0 0 10px 0;
 }
-h1 {
-    text-transform: uppercase;
-}
-b {
-    font-width: 900;
-}
-p {
-    /*line-height: 1.5em;*/
-}
-body {
-    background-size: cover;
-    background: url(../img/cover.png) center center fixed;
-}
-
-/*******************************************************************************
-* TEMPLATE FOR SECTION DIVIDER
-*******************************************************************************/
-
-/*******************************************************************************
-* Sticky Top Navigation
-*******************************************************************************/
-
-.sticky {
-    position: fixed;
-}
-.topNav {
-    padding: 0px 0 0px 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #eee;
-    text-transform: uppercase;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.topNav * {
-    font-size: 14px;
-}
-.topNav li {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-.topNav .inlineList a{
-    padding-bottom: 8px;
-    border-bottom: 3px solid rgba(0,0,0,0);
-}
-.topNav .inlineList a:hover {
-    border-color: black;
-}
-
-/*******************************************************************************
-* Lists
-*******************************************************************************/
-
-ul.inlineList {
-    padding-left: 0;
-    margin-bottom: 3px;
-}
-.inlineList li {
+.inline-list li, nav ul li, .project-tech-list li, ul.filters li {
     display: inline-block;
-    padding: 0 0 0 0;
 }
-.inlineList a {
-    padding: 11px;
-    color: inherit;
+.inline-list li:not(:last-child)::after, .project-tech-list li {
+    content: " • ";
 }
 
-/*******************************************************************************
-* Display Banner
-*******************************************************************************/
-.displayBanner {
-    color: white;
-    padding: 150px 0 150px 0;
-    /*height: 100vh;*/
-    /*min-height: 400px;*/
+ul.filters {
+    margin-bottom: 2em;
 }
-
-/*******************************************************************************
-* Sections
-*******************************************************************************/
-
-section {
-    padding: 100px 0 100px 0;
-    background-color: #fff;
-}
-section p{
-    line-height: 1.5em;
-}
-
-/*******************************************************************************
-* Dividers
-*******************************************************************************/
-
-.divider {
-    height: 200px;
-    /*background-color: #ddd;*/
-}
-#divider1, #divider3 {
-    background-size: cover;
-    background: url(../img/coolgeo.png) center center fixed;
-}
-#divider2 {
-    background-size: cover;
-    background: url(../img/pomegranategeo.png) center center fixed;
-}
-#divider4 {
-    background-size: cover;
-    background: url(../img/orangegeo.png) center center fixed;
-}
-
-/*******************************************************************************
-* Footer
-*******************************************************************************/
-
-footer {
-    padding: 10px 0 7px 0;
-    background-color: #333;
-    color: #fff;
-}
-footer * {
-    font-size: 14px;
-}
-footer a:hover {
-    color: black;
-    background-color: #fff;
-}
-
-/*******************************************************************************
-* Projects
-*******************************************************************************/
-
-.projectImage {
-    -webkit-transform: translate(0px, 15px);
-    -moz-transform: translate(0px, 15px);
-    transform: translate(0px, 15px);
-    width: 80%;
-}
-.projectImage:hover {
-    /*-webkit-filter: drop-shadow(0px 12px 12px rgba(0,0,0,0.5));
-    filter:         drop-shadow(0px 12px 12px rgba(0,0,0,0.5));*/
-    -webkit-transform: translate(0px, 0);
-    -moz-transform: translate(0px, 0);
-    transform: translate(0px, 0);
-}
-.projectInfo {
-    padding-top: 40px;
-}
-.projectInfo h2 {
-    text-align: left;
-}
-
-/*******************************************************************************
-* Section Navigations
-*******************************************************************************/
-
-.projectNav li,
-.eduNav li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.projectNav a,
-.eduNav a {
+ul.filters li {
+    margin-bottom: 0.25em;
+    padding: 0.2em 1em;
+    border: 1px solid #537895;
+    border-radius: 1em;
+    font-weight: 400;
+    font-size: 0.75em;
+    color: #537895;
     cursor: pointer;
 }
-.projectNav a.selected,
-.eduNav a.selected {
-    border-bottom: 3px solid #000;
+ul.filters li.filter-toggle-active, ul.filters li:hover {
+    background-color: #537895;
+    color: white;
 }
-.projectNav a.notSelected:hover,
-.eduNav a.notSelected:hover {
-    border-bottom: 3px solid #ddd;
+.keywords, .project-tech-list {
+    font-size: 0.8em;
 }
-
-/*******************************************************************************
-* Contact
-*******************************************************************************/
-
-#contact {
-    min-height: 500px;
+#personal .keywords {
+    text-align: left;
 }
-
-/*******************************************************************************
-* Other
-*******************************************************************************/
-
-.meCircle {
-    border: 2px solid #333;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
+#contact-list {
+    margin: 2em auto;
 }
-
-.centerVertically {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+#skills ul {
+    text-align: left;
 }
-
-.centeredList {
-    list-style: none;
-    padding-left:0;
+.project-tech-list {
+    margin: 0.5em 0;
+    color: gray;
+    text-align: left;
+}
+#personal-final #contact-list {
+    text-align: left;
+    margin-left: 3em;
+}
+/***********************************************************************
+ * Image Properties
+ **********************************************************************/
+img {
+    display: inline-block;
+}
+.img-circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+#profile-pic {
+	vertical-align: top;
+	margin: 0 50px 0 0;
+	width: 250px;
+}
+.project-img {
+    vertical-align: top;
+    margin: 0 50px 0 0;
+    width: 200px;
+}
+/***********************************************************************
+ * Text Properties
+ **********************************************************************/
+p {
+    margin: 1em 0;
+}
+a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: lightgray;
+}
+a:hover {
+    color: #537895;
+}
+h1 {
+    font-weight: 600;
+    margin-top: 0;
+}
+h2 {
+    margin: 1em 0 0 0;
+    font-size: 1.1em;
+}
+.card-centered h1 {
     text-align: center;
 }
-
-p.subtitle {
-    color: #666;
-    font-style: italic;
-    margin-bottom: 1.5em;
+.slogan {
+    font-size: 1.1em;
+    line-height: 1em;
+}
+#contact-list a, #contact-list span {
+    position: relative;
+    left: 5px;
+}
+#personal h1 {
+    margin-top: 0.5em;
+    line-height: 0em;
+}
+#education span {
+    display: block;
+}
+#projects section h2 {
+    margin: 0;
+}
+#personal-final a {
+    color: white;
+    text-decoration-color: inherit;
+}
+#personal-final a:hover {
+    color: #537895;
+}
+.project-link {
+    margin-top: 2em;
 }
 
-.threeCols {
--webkit-columns: 300px 3;
-   -moz-columns: 300px 3;
-        columns: 300px 3;
+/***********************************************************************
+ * Scroller Properties
+ **********************************************************************/
+#scroll-button-left, #scroll-button-right {
+    position: absolute;
+    top: calc(5em);
+    cursor: pointer;
+    font-size: 3em;
+    color: #537895;
+    opacity: 0.5;
 }
-
-
-
-
-
-
-
-
-
-
-/* END */
+#scroll-button-left:hover, #scroll-button-right:hover {
+    opacity: 1;
+}
+#scroll-button-left {
+    left: -2em;
+}
+#scroll-button-right {
+    right: -2em;
+}
+.scroll-button-inactive {
+    color: #888 !important;
+    opacity: 0.25 !important;
+}
+.project-view-inactive-left, .project-view-inactive-right {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 12.6em;
+    width: 0;
+    opacity: 1;
+    transition: position 0.3s ease, opacity 0.3s ease, visibility 0s ease 3s, width 0.3s ease;
+}
+.project-view-inactive-left {
+    left: calc(-100%);
+}
+.project-view-inactive-right {
+    right: calc(-100%);
+}

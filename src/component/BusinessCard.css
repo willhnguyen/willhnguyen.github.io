@@ -1,0 +1,41 @@
+img {
+    display: inline-block;
+}
+
+img.img-circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+img#profile-pic {
+    vertical-align: top;
+    margin: 0 50px 0 0;
+    width: 250px;
+}
+
+div.business-card {
+    position: relative;
+    width: 650px;
+    margin: 50px auto;
+    padding: 50px;
+    box-shadow: 0 3px 20px 0 rgba(0,0,0,0.25);
+    background-color: white;
+    text-align: left;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul#contact-list {
+    margin: 2em auto;
+}
+
+section.info-section {
+    display: inline-block;
+    width: 350px;
+}
